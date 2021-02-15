@@ -1,4 +1,4 @@
-nclude "../header/rectangle.hpp"
+#include "../header/rectangle.hpp"
 
 #include "gtest/gtest.h"
 
@@ -37,4 +37,42 @@ TEST(RectangleTest, Constructor_HZero){
         Expect_EQ(rect->area(),0);
 }
 
+TEST(RectangleTest, Constructor_WZero){
+        Rectangle* rect = new Rectangle(0,3);
+        Expect_EQ(rect->perimeter(),-1);
+}
 
+TEST(RectangleTest, Constructor_HZero){
+        Rectangle* rect = new Rectangle(3,0);
+        Expect_EQ(rect->perimeter(),-1);
+}
+
+TEST(RectangleTest, Constructor_Negative){
+        Rectangle* rect = new Rectangle(-1,3);
+        Expect_EQ(rect->area(),-1);
+}
+
+TEST(RectangleTest, Constructor_Negative){
+        Rectangle* rect = new Rectangle(3,-1);
+        Expect_EQ(rect->area(),-1);
+}
+
+TEST(RectangleTest, Constructor_Negative){
+        Rectangle* rect = new Rectangle(-1,-3);
+        Expect_EQ(rect->area(),-1);
+}
+
+TEST(RectangleTest, Constructor_Negative){
+        Rectangle* rect = new Rectangle(-3,-1);
+        Expect_EQ(rect->area(),-1);
+}
+
+TEST(RectangleTest, Constructor_Decimal){
+        Rectangle* rect = new Rectangle(1,0.3);
+        Expect_EQ(rect->area(),0.3);
+}
+
+TEST(RectangleTest, Constructor_Negative){
+        Rectangle* rect = new Rectangle(0.3,1);
+        Expect_EQ(rect->area(),0.3);
+}
