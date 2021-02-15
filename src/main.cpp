@@ -5,11 +5,10 @@ using namespace std;
 
 int main()
 {
-    Rectangle rect1;
-    rect1(2,3);
+    Rectangle* rect1 = new Rectangle(2,3);
     cout << "Rectangle 1, width 2 height 3" << endl;
-    cout << "Rectangle area: " << rect1.area() << endl;
-    cout << "Rectangle perimeter: " << rect1.perimeter() << endl;
+    cout << "Rectangle area: " << rect1->area() << endl;
+    cout << "Rectangle perimeter: " << rect1->perimeter() << endl;
 
     Rectangle rect2;
     rect2.set_width(4);
