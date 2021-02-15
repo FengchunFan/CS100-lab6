@@ -9,7 +9,8 @@ int main()
     cout << "Rectangle 1, width 2 height 3" << endl;
     cout << "Rectangle area: " << rect1->area() << endl;
     cout << "Rectangle perimeter: " << rect1->perimeter() << endl;
-
+    delete rect1;
+    
     Rectangle rect2;
     rect2.set_width(4);
     rect2.set_height(5);
