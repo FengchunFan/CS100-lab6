@@ -18,9 +18,17 @@ void Rectangle::set_height(int h){
 }
 
 int Rectangle::area(){
-	return (width * height);
+	if((width >= 0) && (height >= 0)){
+		return (width * height);
+	}else{
+		return -1;
+	}
 }
 
 int Rectangle::perimeter(){
-	return 2*(width + height);
+	if ((width > 0) && (height > 0)){
+		return 2*(width + height);
+	} else {
+		return -1;
+	}
 }
