@@ -34,3 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: Run unit tests for Rectangle class
+        run: |
+          cmake .
+          make
+          ./test
