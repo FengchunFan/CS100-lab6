@@ -37,6 +37,7 @@ jobs:
           
       - name: Run unit tests for Rectangle class
         run: |
+          git submodule update --init --recursive
           cmake .
           make
           ./test
